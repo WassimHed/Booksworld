@@ -1,0 +1,97 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+#content {
+    position: absolute;
+    left: 50%;
+    width: 80%;
+    height: auto;
+    margin-top: 10%;
+    transform: translate(-50%, -20%);
+    background-color: #0d1321 ;
+    border-radius: 8px; 
+    border: 2px solid #f0ebd8;
+    padding-bottom: 10px;
+}
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.logo{
+    color: #f0ebd8;
+    font-size: 28px;
+}
+.way{
+    color: #748cab;
+}
+.navbar ul{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+}
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 5px;
+}
+.navbar ul li a{
+    color: #f0ebd8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #f0ebd8;
+    transition: .5s;
+}
+.navbar ul li a:hover{
+    box-shadow: 0 0 10px white;
+    background-color: #748cab49;
+    transition: .5s;
+}
+.logindiv{
+    display: grid;
+    justify-content: end;
+    align-items: center;
+}
+.login{
+    color: #f0ebd8;
+    background-color: #748cab49;
+    border-radius: 8px;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #f0ebd8;
+}
+@media screen and (max-width :1000px){
+    .logo{
+        display: none;
+    }
+    .navbar{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+    .logindiv{
+        justify-content: center;
+    }
+    
+}
